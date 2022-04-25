@@ -11,11 +11,15 @@ import json
 st.title('INDICE DE DYNAMISME DES COMMUNES')
 st.text('IDAIA')
 
-DATA_URL = (r"C:\Users\jroborel\OneDrive - GROUPE IDAIA\PYTHON-PROJECTS\STREAMLIT_APPS\scores_idcc.shp")
+DATA_URL = (r"C:\Users\jroborel\OneDrive - GROUPE IDAIA\PYTHON-PROJECTS\STREAMLIT_APPS\scores_idcc1.shp")
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load_data(URL):
     data = gpd.read_file(URL)
+    for i in range(2,7):
+        url = fr"C:\Users\jroborel\OneDrive - GROUPE IDAIA\PYTHON-PROJECTS\STREAMLIT_APPS\scores_idcc{i}.shp"
+        append = gpd.read_file(url)
+        data = data.append(append)
     #data.geometry = data.geometry.apply(orient, args=(-1,))
     return data
 
