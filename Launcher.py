@@ -1,9 +1,9 @@
-!pip install streamlit
-!pip install pandas
-!pip install numpy
-!pip install geopandas
-!pip install altair
-!pip install json
+pip install streamlit
+pip install pandas
+pip install numpy
+pip install geopandas
+pip install altair
+pip install json
 import streamlit as st
 import pandas as pd
 import numpy as np
