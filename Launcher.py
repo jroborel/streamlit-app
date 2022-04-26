@@ -7,7 +7,6 @@ st.text('IDAIA')
 
 DATA_URL = ("jroborel/streamlit-app/blob/main/scores_idcc1.shp")
 
-@st.cache(allow_output_mutation=True)
 def load_data(URL):
     data = gpd.read_fle(URL)
     for i in range(2,7):
