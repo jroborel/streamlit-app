@@ -8,7 +8,7 @@ st.text('IDAIA')
 DATA_URL = ("jroborel/streamlit-app/blob/main/scores_idcc1.shp")
 
 def load_data(URL):
-    data = gpd.read_fle(URL)
+    data = gpd.read_file(URL)
     for i in range(2,7):
         url = f"jroborel/streamlit-app/blob/main/scores_idcc{i}.shp"
         append = gpd.read_file(url)
