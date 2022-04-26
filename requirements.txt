@@ -1,7 +1,2 @@
 streamlit
-pandas
-pyproj
-numpy
-six
-fiona
 geopandas
