@@ -1,12 +1,6 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 import geopandas as gpd
-from shapely.ops import orient
-import pandas as pd
-import altair as alt
-from shapely.ops import orient
-import json
+
 #import gpdvega
 st.title('INDICE DE DYNAMISME DES COMMUNES')
 st.text('IDAIA')
