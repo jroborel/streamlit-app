@@ -5,13 +5,13 @@ import geopandas as gpd
 st.title('INDICE DE DYNAMISME DES COMMUNES')
 st.text('IDAIA')
 
-DATA_URL = (r"streamlit-app/scores_idcc1.shp")
+DATA_URL = ("https://github.com/jroborel/streamlit-app/blob/main/scores_idcc1.shp")
 
 @st.cache(allow_output_mutation=True)
 def load_data(URL):
     data = gpd.read_fle(URL)
     for i in range(2,7):
-        url = fr"streamlit-app/scores_idcc{i}.shp"
+        url = f"https://github.com/jroborel/streamlit-app/blob/main/scores_idcc{i}.shp"
         append = gpd.read_file(url)
         data = data.append(append)
     #data.geometry = data.geometry.apply(orient, args=(-1,))
