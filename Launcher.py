@@ -11,12 +11,10 @@ DATA_URL = (r"https://github.com/jroborel/streamlit-app/blob/main/scores_idcc1.c
 def load_data(URL):
     data = pd.read_csv(URL)
     for i in range(2,6):
-        st.write(i)
         url = fr"https://github.com/jroborel/streamlit-app/blob/main/scores_idcc{i}.csv?raw=true"
         append = pd.read_csv(url)
         data = data.append(append)
     for i in range(7,21):
-        st.write(i)
         url = fr"https://github.com/jroborel/streamlit-app/blob/main/scores_idcc{i}.csv?raw=true"
         append = pd.read_csv(url)
         data = data.append(append)
