@@ -10,7 +10,7 @@ DATA_URL = (r"C:\Users\jroborel\OneDrive - GROUPE IDAIA\PYTHON-PROJECTS\STREAMLI
 @st.cache(allow_output_mutation=True)
 def load_data(URL):
     data = pd.read_csv(URL)
-    for i in range(2,7):
+    for i in range(2,21):
         url = fr"C:\Users\jroborel\OneDrive - GROUPE IDAIA\PYTHON-PROJECTS\STREAMLIT_APPS\scores_idcc{i}.csv"
         append = pd.read_csv(url)
         data = data.append(append)
