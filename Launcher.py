@@ -65,5 +65,5 @@ with st.container() :
         st.write(str(int(zone.SCORE.mean())))
 
 st.write(data[data.NOM_COM_M==selected][list(data.columns[:-4])])
-st.subheader(f'SCORE DES 10 MEILLEURS SCORES DE {zonage}')
+st.subheader(f'LES 10 MEILLEURS SCORES DE {zonage}')
 st.write(zone.sort_values(by='POPULATION',ascending=False).iloc[:11])
