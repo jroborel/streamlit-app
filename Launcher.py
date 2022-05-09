@@ -10,9 +10,14 @@ DATA_URL = (r"https://github.com/jroborel/streamlit-app/blob/main/scores_idcc1.c
 @st.cache(allow_output_mutation=True)
 def load_data(URL):
     data = pd.read_csv(URL)
-    for i in range(2,21):
+    for i in range(2,6):
         st.write(i)
         url = fr"https://github.com/jroborel/streamlit-app/blob/main/scores_idcc{i}.csv?raw=true"
+        append = pd.read_csv(url)
+        data = data.append(append)
+    for i in range(7,21):
+        st.write(i)
+        url = fr"C:\Users\jroborel\OneDrive - GROUPE IDAIA\PYTHON-PROJECTS\STREAMLIT_APPS\scores_idcc{i}.csv"
         append = pd.read_csv(url)
         data = data.append(append)
     data.drop(columns='geometry',inplace=True)
