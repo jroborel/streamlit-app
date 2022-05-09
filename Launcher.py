@@ -17,7 +17,7 @@ def load_data(URL):
         data = data.append(append)
     for i in range(7,21):
         st.write(i)
-        url = fr"C:\Users\jroborel\OneDrive - GROUPE IDAIA\PYTHON-PROJECTS\STREAMLIT_APPS\scores_idcc{i}.csv"
+        url = fr"https://github.com/jroborel/streamlit-app/blob/main/scores_idcc{i}.csv?raw=true"
         append = pd.read_csv(url)
         data = data.append(append)
     data.drop(columns='geometry',inplace=True)
